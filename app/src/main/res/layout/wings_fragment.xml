@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/tvWingsTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:text="@string/wings"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvWingsType"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="60dp"
+        android:text="@string/type"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvWingsTitle" />
+
+    <RadioGroup
+        android:id="@+id/rgWingsOptions"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="20dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvWingsType">
+
+        <RadioButton
+            android:id="@+id/rbWingsHot"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:checked="true"
+            android:text="@string/hot" />
+
+        <RadioButton
+            android:id="@+id/rbWingsMedium"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/medium" />
+
+        <RadioButton
+            android:id="@+id/rbWingsMild"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/mild" />
+    </RadioGroup>
+
+    <TextView
+        android:id="@+id/tvWingsExtras"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="60dp"
+        android:text="@string/extras"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvWingsTitle" />
+
+    <CheckBox
+        android:id="@+id/chkWingsBlueCheese"
+        android:layout_width="120dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="@string/blue_cheese"
+        android:textSize="12sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.876"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvWingsExtras" />
+
+    <CheckBox
+        android:id="@+id/chkWingsRanch"
+        android:layout_width="120dp"
+        android:layout_height="wrap_content"
+        android:text="@string/ranch"
+        android:textSize="12sp"
+        app:layout_constraintStart_toStartOf="@+id/chkWingsBlueCheese"
+        app:layout_constraintTop_toBottomOf="@+id/chkWingsBlueCheese" />
+
+    <CheckBox
+        android:id="@+id/chkWingsExtraSauce"
+        android:layout_width="120dp"
+        android:layout_height="wrap_content"
+        android:text="@string/extra_sauce"
+        android:textSize="12sp"
+        app:layout_constraintStart_toStartOf="@+id/chkWingsRanch"
+        app:layout_constraintTop_toBottomOf="@+id/chkWingsRanch" />
+
+    <TextView
+        android:id="@+id/tvWingsQuantity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="92dp"
+        android:layout_marginTop="20dp"
+        android:text="@string/quantity"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.013"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/chkWingsExtraSauce" />
+
+    <EditText
+        android:id="@+id/etWingsQuantity"
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="8dp"
+        android:ems="10"
+        android:gravity="center_horizontal"
+        android:hint="@string/hint"
+        android:inputType="number"
+        app:layout_constraintStart_toEndOf="@+id/tvWingsQuantity"
+        app:layout_constraintTop_toBottomOf="@+id/chkWingsExtraSauce" />
+
+    <Button
+        android:id="@+id/btnAddWingsToOrder"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:text="@string/add_to_order"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etWingsQuantity" />
+</androidx.constraintlayout.widget.ConstraintLayout>

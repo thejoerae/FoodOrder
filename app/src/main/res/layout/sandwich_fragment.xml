@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/tvSandwichTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:text="@string/sandwich"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvSandwichMeat"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="60dp"
+        android:text="@string/meat"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvSandwichTitle" />
+
+    <RadioGroup
+        android:id="@+id/rgSandwichOptions"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="20dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvSandwichMeat">
+
+        <RadioButton
+            android:id="@+id/rbSandwichBeef"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:checked="true"
+            android:text="@string/roast_beef" />
+
+        <RadioButton
+            android:id="@+id/rbSandwichHam"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/ham" />
+
+        <RadioButton
+            android:id="@+id/rbSandwichTurkey"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/turkey" />
+    </RadioGroup>
+
+    <CheckBox
+        android:id="@+id/chkDoubleMeat"
+        android:layout_width="120dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="@string/double_meat"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.866"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvExtras" />
+
+    <TextView
+        android:id="@+id/tvExtras"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="60dp"
+        android:text="@string/extras"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.992"
+        app:layout_constraintStart_toEndOf="@+id/tvSandwichMeat"
+        app:layout_constraintTop_toBottomOf="@+id/tvSandwichTitle" />
+
+    <CheckBox
+        android:id="@+id/chkMayo"
+        android:layout_width="120dp"
+        android:layout_height="wrap_content"
+        android:text="@string/mayo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/chkDoubleMeat"
+        app:layout_constraintTop_toBottomOf="@+id/chkDoubleMeat" />
+
+    <CheckBox
+        android:id="@+id/chkHotPeppers"
+        android:layout_width="120dp"
+        android:layout_height="wrap_content"
+        android:text="@string/hot_peppers"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/chkMayo"
+        app:layout_constraintTop_toBottomOf="@+id/chkMayo" />
+
+    <TextView
+        android:id="@+id/tvSandwichQuantity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="92dp"
+        android:layout_marginTop="20dp"
+        android:text="@string/quantity"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/chkHotPeppers" />
+
+    <EditText
+        android:id="@+id/etSandwichQuantity"
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="8dp"
+        android:ems="10"
+        android:gravity="center_horizontal"
+        android:hint="@string/hint"
+        android:inputType="number"
+        app:layout_constraintStart_toEndOf="@+id/tvSandwichQuantity"
+        app:layout_constraintTop_toBottomOf="@+id/chkHotPeppers" />
+
+    <Button
+        android:id="@+id/btnAddSandwichToOrder"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:text="@string/add_to_order"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etSandwichQuantity" />
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,38 @@
+<resources>
+    <string name="app_name">Joe\'s Grub</string>
+    <string name="pizza">Pizza</string>
+    <string name="sandwich">Sandwich</string>
+    <string name="view_order">View Order</string>
+    <string name="crust">Crust:</string>
+    <string name="thin_crust">Thin</string>
+    <string name="regular_crust">Regular</string>
+    <string name="sicilian_crust">Sicilian</string>
+    <string name="extra_cheese">Extra Cheese</string>
+    <string name="pepperoni">Pepperoni</string>
+    <string name="anchovies">Anchovies</string>
+    <string name="quantity">Quantity:</string>
+    <string name="add_to_order">Add To Order</string>
+    <string name="toppings">Toppings</string>
+    <string name="meat">Meat:</string>
+    <string name="roast_beef">Roast Beef</string>
+    <string name="ham">Ham</string>
+    <string name="turkey">Turkey</string>
+    <string name="extras">Extras:</string>
+    <string name="double_meat">Double Meat</string>
+    <string name="mayo">Mayo</string>
+    <string name="hot_peppers">Hot Peppers</string>
+    <string name="wings">Wings</string>
+    <string name="type">Type:</string>
+    <string name="hot">Hot</string>
+    <string name="medium">Medium</string>
+    <string name="mild">Mild</string>
+    <string name="blue_cheese">Blue Cheese and Celery</string>
+    <string name="ranch">Ranch Dressing and Celery</string>
+    <string name="extra_sauce">Extra Sauce</string>
+    <string name="your_order">Your Order:</string>
+    <string name="id">ID:</string>
+    <string name="category">Category:</string>
+    <string name="item">Item:</string>
+    <string name="hint">1</string>
+
+</resources>

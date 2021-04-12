@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/tvPizzaTitle"
+        android:layout_width="47dp"
+        android:layout_height="32dp"
+        android:layout_marginTop="30dp"
+        android:text="@string/pizza"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvPizzaCrust"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="60dp"
+        android:text="@string/crust"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvPizzaTitle" />
+
+    <RadioGroup
+        android:id="@+id/rgPizzaOptions"
+        android:layout_width="93dp"
+        android:layout_height="144dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="20dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvPizzaCrust">
+
+        <RadioButton
+            android:id="@+id/rbPizzaCrustThin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:checked="true"
+            android:text="@string/thin_crust" />
+
+        <RadioButton
+            android:id="@+id/rbPizzaCrustRegular"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/regular_crust" />
+
+        <RadioButton
+            android:id="@+id/rbPizzaCrustSicilian"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/sicilian_crust" />
+    </RadioGroup>
+
+    <CheckBox
+        android:id="@+id/chkExtraCheese"
+        android:layout_width="126dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="30dp"
+        android:text="@string/extra_cheese"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvToppings" />
+
+    <CheckBox
+        android:id="@+id/chkAnchovies"
+        android:layout_width="126dp"
+        android:layout_height="50dp"
+        android:text="@string/anchovies"
+        app:layout_constraintEnd_toEndOf="@+id/chkPepperoni"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/chkPepperoni"
+        app:layout_constraintTop_toBottomOf="@+id/chkPepperoni" />
+
+    <CheckBox
+        android:id="@+id/chkPepperoni"
+        android:layout_width="126dp"
+        android:layout_height="50dp"
+        android:text="@string/pepperoni"
+        app:layout_constraintEnd_toEndOf="@+id/chkExtraCheese"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/chkExtraCheese"
+        app:layout_constraintTop_toBottomOf="@+id/chkExtraCheese" />
+
+    <TextView
+        android:id="@+id/tvPizzaQuantity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="92dp"
+        android:layout_marginTop="20dp"
+        android:text="@string/quantity"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/chkAnchovies" />
+
+    <EditText
+        android:id="@+id/etPizzaQuantity"
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="8dp"
+        android:autoText="false"
+        android:ems="10"
+        android:gravity="center"
+        android:hint="@string/hint"
+        android:inputType="number"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/tvPizzaQuantity"
+        app:layout_constraintTop_toBottomOf="@+id/chkAnchovies" />
+
+    <Button
+        android:id="@+id/btnAddPizzaToOrder"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:text="@string/add_to_order"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etPizzaQuantity" />
+
+    <TextView
+        android:id="@+id/tvToppings"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="60dp"
+        android:text="@string/toppings"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvPizzaTitle" />
+</androidx.constraintlayout.widget.ConstraintLayout>
